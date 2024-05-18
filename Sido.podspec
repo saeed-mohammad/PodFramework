@@ -18,6 +18,10 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/saeed-mohammad/PodFramework.git", :tag => "#{spec.version}" }
 
+  spec.preserve_paths = 'Sido.framework'
+  spec.vendored_frameworks = 'Sido.framework'
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
   #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   #spec.exclude_files = "Classes/Exclude"
   # spec.public_header_files = "Classes/**/*.h"
