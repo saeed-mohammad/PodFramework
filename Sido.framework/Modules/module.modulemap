@@ -1,0 +1,6 @@
+framework module Sido {
+  umbrella header "Sido.h"
+  export *
+
+  module * { export * }
+}
